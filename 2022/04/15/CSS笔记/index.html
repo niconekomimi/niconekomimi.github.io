@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Evil_Eyes">
+    
+    
+    
+    
+    
+    
+    <title>CSS笔记 | NecoMiMi</title>
+    <link href="https://niconekomimi.github.io" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'https://niconekomimi-1310995745.cos.ap-nanjing.myqcloud.com/preview1.jpg,https://niconekomimi-1310995745.cos.ap-nanjing.myqcloud.com/preview2.jpg,https://niconekomimi-1310995745.cos.ap-nanjing.myqcloud.com/preview3.jpg,https://niconekomimi-1310995745.cos.ap-nanjing.myqcloud.com/preview4.jpg,https://niconekomimi-1310995745.cos.ap-nanjing.myqcloud.com/preview5.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 6.1.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="https://niconekomimi.github.io">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">NecoMiMi</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/css/">css</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/html5/">html5</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="https://niconekomimi.github.io">NecoMiMi</a>
+        >
+        <span>CSS笔记</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2022/04/15/CSS%E7%AC%94%E8%AE%B0/">CSS笔记</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/css/">css</a>, 
+                
+                <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2022-04-15
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2022/04/15/CSS%E7%AC%94%E8%AE%B0/">CSS笔记</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2022-04-15
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/css/">css</a>, 
+                
+                <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+                
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h4 id="1-CSS基本格式"><a href="#1-CSS基本格式" class="headerlink" title="1.CSS基本格式"></a>1.CSS基本格式</h4><p>语法：<br>选择器{<br>    声明1;<br>    声明2;<br>    声明3;<br>}</p>
+<hr>
+<h4 id="2-css的三种导入方式"><a href="#2-css的三种导入方式" class="headerlink" title="2.css的三种导入方式"></a>2.css的三种导入方式</h4><ol>
+<li>直接标签加入style属性；（行内样式）</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1 style=&quot;color: red&quot;&gt;我是标题&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>用<style></style>写入；（内部样式）</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    h1&#123;</span><br><span class="line">        color: #ff0000;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>创建一个css文件，<link rel="stylesheet" href="css文件">用于在html5文件中链接css文件；（外部样式）</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;优先级，就近原则，用离代码最近的样式&#x3D;&#x3D;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--导入式--&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        @import &quot;css/style.css&quot;;</span><br><span class="line">    &lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>旧版2.1导入css方式</p>
+<hr>
+<h4 id="3-选择器"><a href="#3-选择器" class="headerlink" title="3.选择器"></a>3.选择器</h4><ol>
+<li>标签选择器：选择所有标签 标签{}</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">h1&#123;</span><br><span class="line">    /*标签选择器，会选择所有的h1标签*/</span><br><span class="line">    color: red;</span><br><span class="line">    background: aqua;</span><br><span class="line">    border-radius: 24px;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&lt;h1&gt;一个标签&lt;/h1&gt;</span><br><span class="line">&lt;h1&gt;二个标题&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>类选择器：选择一类标签 .class{}</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/*类选择器格式.class的名称&#123;&#125;</span><br><span class="line">好处可以多个标签归类，是同一个class</span><br><span class="line">*/</span><br><span class="line">.shiyigelei&#123;</span><br><span class="line">    color: red;</span><br><span class="line">&#125;</span><br><span class="line">.shiergelei&#123;</span><br><span class="line">    color: blueviolet;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;h1 class=&quot;shiyigelei&quot;&gt;标题1&lt;/h1&gt;</span><br><span class="line">&lt;h1 class=&quot;shiergelei&quot;&gt;标题2&lt;/h1&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>id选择器：id全局唯一 #id{}</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/*id选择器:id必须保证全局唯一</span><br><span class="line">#id名称&#123;&#125;</span><br><span class="line">不遵循就近原则，固定id选择器&gt;class选择器&gt;标签选择器</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">#dage&#123;</span><br><span class="line">    color: blue;</span><br><span class="line">&#125;</span><br><span class="line">#xiaodi&#123;</span><br><span class="line">    color: deeppink;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;h1 id=&quot;dage&quot;&gt;标题1&lt;/h1&gt;</span><br><span class="line">&lt;h1 id=&quot;xiaodi&quot;&gt;标题2&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;三种选择器不遵循就近原则，固定id选择器&gt;class选择器&gt;标签选择器&#x3D;&#x3D;</p>
+<hr>
+<h4 id="4-层次选择器"><a href="#4-层次选择器" class="headerlink" title="4.层次选择器"></a>4.层次选择器</h4><ol>
+<li>后代选择器</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">body p&#123;</span><br><span class="line">    background: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>子选择器，选儿子辈</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">body&gt;p&#123;</span><br><span class="line">    background: deeppink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>相邻兄弟选择器,只有一个，相邻向下</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.active+p&#123;</span><br><span class="line">            background: blueviolet;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p>4.通用选择器,当前选中元素所有向下的所有兄弟元素</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.active~p&#123;</span><br><span class="line">    background: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="5-结构伪类选择器"><a href="#5-结构伪类选择器" class="headerlink" title="5.结构伪类选择器"></a>5.结构伪类选择器</h4><p>伪类：条件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">/*ul的第一个子元素*/</span><br><span class="line">ul li:first-child&#123;</span><br><span class="line">    background: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*ul的最后一个元素*/</span><br><span class="line">ul li:last-child&#123;</span><br><span class="line">    background: green;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*选中p1：定位到父元素，选择当前的第一个元素</span><br><span class="line">选择当前p元素的父级元素，选中父级元素的第一个，并且是当前元素才生效*/</span><br><span class="line">p:nth-child(1)&#123;</span><br><span class="line">    background: blueviolet;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*选中父元素下的p元素的第二个*/</span><br><span class="line">p:nth-of-type(1)&#123;</span><br><span class="line">    background: deeppink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;p:nth-child(x)与p:nth-of-type(x)的区别：第一个是找父元素下第x个元素是否为p，若为p则生效；第二个是找父元素下第x个p元素&#x3D;&#x3D;</p>
+<hr>
+<h4 id="6-属性选择器（常用）"><a href="#6-属性选择器（常用）" class="headerlink" title="6.属性选择器（常用）"></a>6.属性选择器（常用）</h4><p>通过属性来查找元素</p>
+<p>标签[属性名&#x3D;属性值]{}<br>&#x3D; 代表绝对等于<br>*&#x3D;代表包含这个元素<br>^&#x3D;以这个开头<br>$&#x3D;以这个结尾</p>
+<hr>
+<h4 id="7-美化网页元素"><a href="#7-美化网页元素" class="headerlink" title="7.美化网页元素"></a>7.美化网页元素</h4><p>1.span标签，需要突出的字用span标签套起来</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line"></span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        #title&#123;</span><br><span class="line">            font-size: 50px;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">欢迎学习 &lt;span id=&quot;title&quot;&gt;JAVA&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+
+<p>font-size:字体大小<br>font-family:字体<br>font-weight:字体粗细<br>color:字体颜色</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    #title&#123;</span><br><span class="line">        font-size: 50px;</span><br><span class="line">    &#125;</span><br><span class="line">    body&#123;</span><br><span class="line">        font-family: 宋体,&quot;Times New Roman&quot;;</span><br><span class="line">        color: darksalmon;</span><br><span class="line">    &#125;</span><br><span class="line">    h1&#123;</span><br><span class="line">        font-size: 50px;</span><br><span class="line">    &#125;</span><br><span class="line">    .p1&#123;</span><br><span class="line">        font-weight: bold;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>2.阴影<br>text-shadow:阴影颜色，水平便宜，垂直便宜，阴影半径</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">text-shadow: #3cc7f5 1px 10px 10px;</span><br></pre></td></tr></table></figure>
+
+<p>3.超链接伪类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/*鼠标悬浮效果*/</span><br><span class="line">a:hover&#123;</span><br><span class="line">    color: burlywood;</span><br><span class="line">    font-size: 20px;</span><br><span class="line">&#125;</span><br><span class="line">/*鼠标按住效果*/</span><br><span class="line">a:active&#123;</span><br><span class="line">    color: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>4.列表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#nav&#123;</span><br><span class="line">    width: 280px; </span><br><span class="line">    background: whitesmoke;</span><br><span class="line">&#125;</span><br><span class="line">.title&#123;</span><br><span class="line">    font-size: 18px; </span><br><span class="line">    font-weight: bold; </span><br><span class="line">    text-indent: 1em; </span><br><span class="line">    line-height: 35px;</span><br><span class="line">    background: red;</span><br><span class="line">&#125;</span><br><span class="line">/*ul li 选中全部ul li*/</span><br><span class="line">ul li&#123;</span><br><span class="line">    height: 30px;</span><br><span class="line">    list-style: none;</span><br><span class="line">    text-indent: 5px;</span><br><span class="line">&#125;</span><br><span class="line">ul&#123;</span><br><span class="line">    background: whitesmoke;</span><br><span class="line">&#125;</span><br><span class="line">a&#123;</span><br><span class="line">    text-decoration: none; //去掉超链接下划线</span><br><span class="line">    font-size: 14px;</span><br><span class="line">    color: black;</span><br><span class="line">&#125;</span><br><span class="line">a:hover&#123;</span><br><span class="line">    color: orange;</span><br><span class="line">    text-decoration: underline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>5.背景</p>
+<p>background-repeat:设置背景平铺</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">    width: 1000px;</span><br><span class="line">    height: 2000px;</span><br><span class="line">    border: 1px solid red;</span><br><span class="line">    background-image: url(&quot;image/dc3699773912b31b88852444e120.png&quot;);</span><br><span class="line">&#125;</span><br><span class="line">/*background-repeat默认不平铺，repeat-x水平平铺，repeat-y竖直平铺*/</span><br><span class="line">.div1&#123;</span><br><span class="line">    background-repeat: repeat-x;</span><br><span class="line">&#125;</span><br><span class="line">.div2&#123;</span><br><span class="line">    background-repeat: repeat-y;</span><br><span class="line">&#125;</span><br><span class="line">.div3&#123;</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>6.渐变<br>渐变色网站<a target="_blank" rel="noopener" href="https://www.grabient.com/">https://www.grabient.com/</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">background-color: #D9AFD9;</span><br><span class="line">background-image: linear-gradient(100deg, #D9AFD9 0%, #97D9E1 100%);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="8-盒子模型"><a href="#8-盒子模型" class="headerlink" title="8.盒子模型"></a>8.盒子模型</h4><p><img src="https://s2.loli.net/2022/04/15/bdHUFmJW9VK84qO.png"></p>
+<p>margin：外边距<br>        从左往右 上左下右<br>        margin: 0<br>        margin: 0 1px<br>        margin: 0 1px 2px 3px<br>        margin: 0 1px 2px 3px 4px</p>
+<p>padding：内边距（与外边距相同）</p>
+<p>border：边框</p>
+<p>​    border:粗细，样式，颜色</p>
+<h4 id="9-圆角边框"><a href="#9-圆角边框" class="headerlink" title="9.圆角边框"></a>9.圆角边框</h4><p>border-radius：设置边框的角</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--</span><br><span class="line">左上 右上 右下 左下</span><br><span class="line">--&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">    div&#123;</span><br><span class="line">        width: 100px;</span><br><span class="line">        height: 100px;</span><br><span class="line">        border: 10px solid red;</span><br><span class="line">        border-radius: 50px 20px 10px 0px;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="10-阴影"><a href="#10-阴影" class="headerlink" title="10.阴影"></a>10.阴影</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">box-shadow: 10px 10px 100px yellow;</span><br></pre></td></tr></table></figure>
+
+<p>右偏移    下便宜     阴影宽度   颜色</p>
+<h4 id="11-浮动"><a href="#11-浮动" class="headerlink" title="11.浮动"></a>11.浮动</h4>
+    </div>
+</article>
+
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            Evil_Eyes
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022/04/15/CSS%E7%AC%94%E8%AE%B0/">CSS笔记</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022/04/08/html5%E7%AC%94%E8%AE%B0/">HTML5笔记</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022/04/08/hello-world/">Hello World</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022/04/15/CSS%E7%AC%94%E8%AE%B0/">CSS笔记</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022/04/08/hello-world/">Hello World</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022/04/08/html5%E7%AC%94%E8%AE%B0/">HTML5笔记</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2022/04/15/CSS%E7%AC%94%E8%AE%B0/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2022/04/15/CSS%E7%AC%94%E8%AE%B0/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2022/04/15/CSS%E7%AC%94%E8%AE%B0/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/css/" style="font-size: 17.621014935453807px;" class="tag-cloud-link">css</a>
+    
+    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 17.748804959614px;" class="tag-cloud-link">学习笔记</a>
+    
+    <a href="/tags/html5/" style="font-size: 11.076322455327997px;" class="tag-cloud-link">html5</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="http://kdays.net/days/" target="_blank">KDays Forum</a>
+    </li>
+    
+    <li>
+        <a href="http://www.gal123.com/" target="_blank">绅士导航♂</a>
+    </li>
+    
+    <li>
+        <a href="http://www.moe123.com/" target="_blank">萌导航</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/niconekomimi" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://space.bilibili.com/8642007" target="_blank">B站</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 Evil_Eyes Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/weier.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":1}});</script></body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '14'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+
+</html>
