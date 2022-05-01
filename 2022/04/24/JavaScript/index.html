@@ -326,7 +326,59 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\<span class="string">&#x27;</span></span><br><span class="line"><span class="string">\n</span></span><br><span class="line"><span class="string">\t  </span></span><br><span class="line"><span class="string">\u4e2d     \u#### Unicode字符</span></span><br><span class="line"><span class="string">“\x41”     Ascll字符</span></span><br></pre></td></tr></table></figure>
 
 <p>3.多行字符串编写</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//tab 上面的引号</span></span><br><span class="line"><span class="keyword">var</span> msg =</span><br><span class="line">    <span class="string">`好家伙</span></span><br><span class="line"><span class="string">这是tab引号</span></span><br><span class="line"><span class="string">不是单引号</span></span><br><span class="line"><span class="string">`</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//tab 上面的引号</span></span><br><span class="line"><span class="keyword">var</span> msg =</span><br><span class="line">    <span class="string">`好家伙</span></span><br><span class="line"><span class="string">这是tab引号</span></span><br><span class="line"><span class="string">不是单引号`</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>4.模板字符串</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//tab 上面的引号</span></span><br><span class="line"><span class="keyword">let</span> name =<span class="string">&quot;王玉龙&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> age = <span class="string">&quot;22&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> b = <span class="string">`你好啊，<span class="subst">$&#123;name&#125;</span>//$用于引用其它元素</span></span><br></pre></td></tr></table></figure>
+
+<p>5.字符串长度</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.<span class="property">length</span></span><br></pre></td></tr></table></figure>
+
+<p>6.字符串的可变性，不可变</p>
+<p><img src="https://s2.loli.net/2022/05/01/vENwcV6zYiBu2HA.png" alt="image-20220501134658495"></p>
+<p>7.大小写转换</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//注意这里是方法，不是属性</span></span><br><span class="line">student.<span class="title function_">toUpperCase</span>()</span><br><span class="line">student.<span class="title function_">toLowerCase</span>()</span><br></pre></td></tr></table></figure>
+
+<p>8.student.indexOf(“t”)</p>
+<p><strong>9.substring</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">student.<span class="title function_">substring</span>(<span class="number">1</span>)<span class="comment">//1到最后一个字符</span></span><br><span class="line">student.<span class="title function_">substring</span>(<span class="number">2</span>,<span class="number">4</span>)<span class="comment">//2到4个字符串</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-2数组"><a href="#3-2数组" class="headerlink" title="3.2数组"></a>3.2数组</h3><p><strong>Array可以包含任意的数据类型</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr =[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br></pre></td></tr></table></figure>
+
+<p>1.长度</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.<span class="property">length</span></span><br></pre></td></tr></table></figure>
+
+<p>注意：加入给arr.length赋值，数组大小就会发生变化，如果赋值过小，元素就会丢失</p>
+<p>2.indexOf,通过元素获得下标索引</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">arr.<span class="title function_">indexof</span>(<span class="number">2</span>)</span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>3.**slice()**截取Array的一部分，返回一个新的数组，类似于string中的substring</p>
+<p>4.push(),pop()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">push</span>:压入到尾部</span><br><span class="line">pop：弹出尾部的一个元素</span><br></pre></td></tr></table></figure>
+
+<p>5.unshift(),shift()头部</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">unshift</span>:压入到头部</span><br><span class="line">shift：弹出头部的一个元素</span><br></pre></td></tr></table></figure>
+
+<p>6.排序sort（）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.<span class="title function_">sort</span>()</span><br></pre></td></tr></table></figure>
+
+<p>7.元素反转</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.<span class="title function_">reverse</span>()</span><br></pre></td></tr></table></figure>
+
+<p>8.concat()</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.concat([1,2,3])</span><br></pre></td></tr></table></figure>
+
+<p>注意：concat()并没有修改素组，只是会返回一个新的数组</p>
+<p>9.连接符join</p>
+<p>打印拼接素组，使用指定的字符串链接</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.<span class="title function_">join</span>(<span class="string">&#x27;-&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>10.多维数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr = [[<span class="number">1</span>,<span class="number">2</span>][<span class="number">3</span>,<span class="number">4</span>],[<span class="string">&quot;5&quot;</span>,<span class="string">&quot;6&quot;</span>]]</span><br></pre></td></tr></table></figure>
+
 
     </div>
 </article>
@@ -479,13 +531,13 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/css/" style="font-size: 14.402692007146387px;" class="tag-cloud-link">css</a>
+    <a href="/tags/css/" style="font-size: 18.367894721423582px;" class="tag-cloud-link">css</a>
     
-    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 15.456290780632358px;" class="tag-cloud-link">学习笔记</a>
+    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 18.375657796659187px;" class="tag-cloud-link">学习笔记</a>
     
-    <a href="/tags/html5/" style="font-size: 16.464609103679823px;" class="tag-cloud-link">html5</a>
+    <a href="/tags/html5/" style="font-size: 15.595477535367948px;" class="tag-cloud-link">html5</a>
     
-    <a href="/tags/JavaScript/" style="font-size: 9.325007273374196px;" class="tag-cloud-link">JavaScript</a>
+    <a href="/tags/JavaScript/" style="font-size: 12.579436474721433px;" class="tag-cloud-link">JavaScript</a>
     
 </div>
                 
