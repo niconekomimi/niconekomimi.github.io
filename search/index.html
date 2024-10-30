@@ -47,7 +47,7 @@
       if (document.images) {
         var avatar = new Image();
         avatar.src = '/imgs/avatar.jpg'
-        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg'.split(',')
+        var previews = 'https://niconekomimi-1310995745.cos.ap-nanjing.myqcloud.com/preview1.jpg,https://niconekomimi-1310995745.cos.ap-nanjing.myqcloud.com/preview2.jpg,https://niconekomimi-1310995745.cos.ap-nanjing.myqcloud.com/preview3.jpg,https://niconekomimi-1310995745.cos.ap-nanjing.myqcloud.com/preview4.jpg,https://niconekomimi-1310995745.cos.ap-nanjing.myqcloud.com/preview5.jpg'.split(',')
         var previewsPreLoad = []
         for(var i = 0; i < length; i++) {
           previewsPreLoad.push(new Image())
@@ -116,20 +116,56 @@
                 
                 
                 
-                <li class="">
-                    <a href="/categories">
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
                         <i class="fa fa-list"></i>分类
                     </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
                 </li>
                 
                 
                 
                 
                 
-                <li class="">
-                    <a href="/tags">
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
                         <i class="fa fa-tags"></i>标签
                     </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/css/">css</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/html5/">html5</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
                 </li>
                 
                 
@@ -206,7 +242,7 @@
       	var [month, day] = article.date.split('-')
         ''
         ''
-        var defaultPreview = '/imgs/preview/preview2.jpg'
+        var defaultPreview = 'https://niconekomimi-1310995745.cos.ap-nanjing.myqcloud.com/preview1.jpg'
         var preview = article.preview ? article.preview : defaultPreview
         var path = '/' + article.path
         resultList.append(`<div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
@@ -420,6 +456,24 @@
                 </span>
             </li>
             
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022/04/24/JavaScript/">JavaScript</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022/04/15/CSS%E7%AC%94%E8%AE%B0/">CSS笔记</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022/04/08/html5%E7%AC%94%E8%AE%B0/">HTML5笔记</a>
+                </span>
+            </li>
+            
         </ul>
     </div>
 </aside>
@@ -438,7 +492,25 @@
             
             <li class="list-group-item">
                 <span class="post-title">
+                    <a href="/2022/04/15/CSS%E7%AC%94%E8%AE%B0/">CSS笔记</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
                     <a href="/2024/10/30/hello-world/">Hello World</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022/04/08/html5%E7%AC%94%E8%AE%B0/">HTML5笔记</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022/04/24/JavaScript/">JavaScript</a>
                 </span>
             </li>
             
@@ -471,6 +543,14 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
+    <a href="/tags/css/" style="font-size: 18.335911842192637px;" class="tag-cloud-link">css</a>
+    
+    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 14.37603429837629px;" class="tag-cloud-link">学习笔记</a>
+    
+    <a href="/tags/html5/" style="font-size: 13.967192891312525px;" class="tag-cloud-link">html5</a>
+    
+    <a href="/tags/JavaScript/" style="font-size: 8.638231248579194px;" class="tag-cloud-link">JavaScript</a>
+    
 </div>
                 
                 
@@ -494,15 +574,11 @@
                 <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
     
     <li>
-        <a href="https://github.com/ZEROKISEKI/" target="_blank">Github</a>
+        <a href="https://github.com/niconekomimi" target="_blank">Github</a>
     </li>
     
     <li>
-        <a href="https://coding.net/u/SORA1" target="_blank">Coding</a>
-    </li>
-    
-    <li>
-        <a href="https://www.zhihu.com/people/aonosora/activities" target="_blank">知乎</a>
+        <a href="https://space.bilibili.com/8642007" target="_blank">B站</a>
     </li>
     
 </div>
@@ -572,7 +648,7 @@
     window.slideConfig = {
       prefix: '/imgs/slide/background',
       ext: 'jpg',
-      maxCount: '6'
+      maxCount: '14'
     }
 </script>
 

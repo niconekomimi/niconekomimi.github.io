@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Evil_Eyes">
+    
+    
+    
+    
+    
+    
+    <title>HTML5笔记 | NecoMiMi</title>
+    <link href="https://niconekomimi.github.io" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'https://niconekomimi-1310995745.cos.ap-nanjing.myqcloud.com/preview1.jpg,https://niconekomimi-1310995745.cos.ap-nanjing.myqcloud.com/preview2.jpg,https://niconekomimi-1310995745.cos.ap-nanjing.myqcloud.com/preview3.jpg,https://niconekomimi-1310995745.cos.ap-nanjing.myqcloud.com/preview4.jpg,https://niconekomimi-1310995745.cos.ap-nanjing.myqcloud.com/preview5.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="https://niconekomimi.github.io">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">NecoMiMi</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/css/">css</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/html5/">html5</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="https://niconekomimi.github.io">NecoMiMi</a>
+        >
+        <span>HTML5笔记</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2022/04/08/html5%E7%AC%94%E8%AE%B0/">HTML5笔记</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>, 
+                
+                <a href="/tags/html5/">html5</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2022-04-08
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2022/04/08/html5%E7%AC%94%E8%AE%B0/">HTML5笔记</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2022-04-08
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>, 
+                
+                <a href="/tags/html5/">html5</a>
+                
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h4 id="文档结构"><a href="#文档结构" class="headerlink" title="文档结构"></a>文档结构</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;&lt;!--以html5解析如下代码--&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;utf-8&quot;;&gt;</span><br><span class="line">    &lt;meta name=keywords&quot; content=&quot;&quot;&gt;&lt;!--关键字--&gt;</span><br><span class="line">    &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;&lt;!--网站描述内容--&gt;</span><br><span class="line">    &lt;title&gt;网站&lt;/title&gt;</span><br><span class="line">    &lt;!--设置一个小图标:--&gt;</span><br><span class="line">    &lt;link rel=&quot;shortcut icon&quot; href=&quot;https://i0.hdslb.com/bfs/tag/b13be00a840ad1c60770b0d352b84daadff67e7c.jpg&quot; type=&quot;img/jpg&quot;&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        /*书写样式的部分*/</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">    &lt;link rel=&quot;atylesheet&quot; href=&quot;style.css&quot;;&gt;&lt;!--用来引入外部样式文件--&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p&gt;//这是一个文本&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    //放脚本代码的地方</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="基本标签"><a href="#基本标签" class="headerlink" title="基本标签"></a>基本标签</h4><p>生成文档结构快捷键 输入!后按tab或HTML:5后按tab</p>
+<ul>
+<li>div：用于布局，将文本分层</li>
+<li>hx：标题，从1级到6级<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt;一级标签&lt;h1&gt;</span><br><span class="line">&lt;h2&gt;二级标签&lt;h2&gt;</span><br></pre></td></tr></table></figure></li>
+<li>p：表示一个段落<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;</span><br></pre></td></tr></table></figure></li>
+<li>br：表示换行，将一段文字换行<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;br/&gt;</span><br></pre></td></tr></table></figure></li>
+<li>hr：生成一条分割线 设置后的标签，分别为宽度、位置】颜色、高度<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;hr/&gt;</span><br><span class="line">&lt;hr width=&quot;80%&quot; align=&quot;center&quot; color=&quot;red&quot; height=&quot;2px&quot;&gt;</span><br></pre></td></tr></table></figure></li>
+<li>粗体斜体<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">粗体：&lt;strong&gt;i love you&lt;/strong&gt;</span><br><span class="line">斜体：&lt;em&gt;i love you&lt;/em&gt;</span><br></pre></td></tr></table></figure></li>
+<li>空格<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&amp;nbsp</span><br></pre></td></tr></table></figure></li>
+<li>特殊符号：&amp;+各种代码</li>
+</ul>
+<hr>
+<h4 id="图片标签"><a href="#图片标签" class="headerlink" title="图片标签"></a>图片标签</h4><p>&#x3D;&#x3D;快速生成img标签（输入img+tab键）&#x3D;&#x3D;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;../resourse/image/cover_1.jpg&quot; alt=&quot;星光咖啡厅与死亡之蝶&quot; title=&quot;悬停标签&quot; &gt;</span><br></pre></td></tr></table></figure>
+<p>&#x3D;&#x3D;每个属性后面接着引号按空格会自动跳出可以设置的属性菜单&#x3D;&#x3D;</p>
+<hr>
+<h4 id="链接标签"><a href="#链接标签" class="headerlink" title="链接标签"></a>链接标签</h4><p>&#x3D;&#x3D;快速生成a链接（a+tab）&#x3D;&#x3D;</p>
+<p>href表示跳转到的页面<br>target: 表示窗口在哪打开<br>    _blank在一个新标签打开<br>    _self 在自己的网页中打开</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;tab.html&quot; target=&quot;_blank&quot;&gt;tab&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p>锚链接<br>1.需要一个锚标签<br>2.跳转到标记<br>3.#</p>
+<!--使用name做标记-->
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;a name=&quot;top&quot;&gt;顶部&lt;/a&gt;</span><br><span class="line">下方代码用于跳到顶部的标记top</span><br><span class="line">&lt;a href=&quot;#top&quot;&gt;回到顶部&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p>邮件链接：mailto：+邮箱</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;mailto:673269043@qq.com&quot;&gt;点击联系邮箱&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="行内元素和块元素"><a href="#行内元素和块元素" class="headerlink" title="行内元素和块元素"></a>行内元素和块元素</h4><ul>
+<li>块内元素<br>无论内容多少，元素独占一行（比如p、h1-h6…）</li>
+<li>行内元素<br>内容撑开宽度，左右都是行内元素可以再排一行（a、strong、em…）</li>
+</ul>
+<hr>
+<h4 id="列表标签"><a href="#列表标签" class="headerlink" title="列表标签"></a>列表标签</h4><ul>
+<li>有序列表（Ordered List）</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">    &lt;li&gt;内容1&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;内容2&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>无序列表（Unordered List）</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li&gt;内容1&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;内容2&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>自定义列表（definition lists）</p>
+<p>dl:标签<br>dt:列表名称<br>dd:列表内容</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;dl&gt;</span><br><span class="line">    &lt;dt&gt;标题1&lt;/dt&gt;</span><br><span class="line">    &lt;dd&gt;内容1&lt;/dd&gt;</span><br><span class="line">    &lt;dd&gt;内容2&lt;/dd&gt;</span><br><span class="line"></span><br><span class="line">    &lt;dt&gt;标题2&lt;/dt&gt;</span><br><span class="line">    &lt;dd&gt;内容1&lt;/dd&gt;</span><br><span class="line">    &lt;dd&gt;内容2&lt;/dd&gt;</span><br><span class="line">&lt;/dl&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h4><p>表格（table）<br>行 tr （table rows）<br>列(表格中的单元格) td （table data cell）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;table border=&quot;1px&quot;&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">    &lt;!--跨列colspan--&gt;</span><br><span class="line">        &lt;td colspan=&quot;4&quot;&gt;1-1&lt;/td&gt;</span><br><span class="line">        &lt;!--第一个元素跨四列--&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">    &lt;!--跨行 rowspan--&gt;</span><br><span class="line">        &lt;td rowspan=&quot;2&quot;&gt;2-1&lt;/td&gt;</span><br><span class="line">        &lt;!--2-1向下跨两行--&gt;</span><br><span class="line">        &lt;td&gt;2-2&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;2-3&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;2-4&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td&gt;3-1&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;3-2&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;3-3&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td&gt;4-1&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;4-2&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;4-3&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;4-4&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="视频和音频"><a href="#视频和音频" class="headerlink" title="视频和音频"></a>视频和音频</h4><p>  scr:资源路径<br>  controls:控制条<br>  autoplay:自动播放</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;video src=&quot;../resourse/video/video.mp4&quot; controls autoplay&gt;&lt;/video&gt;</span><br><span class="line"></span><br><span class="line">&lt;audio src=&quot;../resourse/audio/米津玄師%20-%20Lemon.mp3&quot; controls&gt;&lt;/audio&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="页面结构"><a href="#页面结构" class="headerlink" title="页面结构"></a>页面结构</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;header&gt;</span><br><span class="line">    网页头部</span><br><span class="line">&lt;/header&gt;</span><br><span class="line"></span><br><span class="line">&lt;secter&gt;</span><br><span class="line">    网页主体</span><br><span class="line">&lt;/secter&gt;</span><br><span class="line"></span><br><span class="line">&lt;footer&gt;</span><br><span class="line">    网页脚部</span><br><span class="line">&lt;/footer&gt;</span><br></pre></td></tr></table></figure>
+
+<p>  header：标题头部区域内容<br>  footer：标记脚部区域的内容<br>  section：web页面中的一块独立区域<br>  article：独立文章内容<br>  aside：相关内容或应用<br>  nav：导航类辅助内容</p>
+<h4 id="内联框架"><a href="#内联框架" class="headerlink" title="内联框架"></a>内联框架</h4><p>iframe：用于在页面嵌入网页等</p>
+<p>嵌入跳转链接的方法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe src=&quot;&quot; name=&quot;hello&quot; frameborder=&quot;0&quot; width=&quot;1000px&quot; height=&quot;800px&quot;&gt;&lt;/iframe&gt;</span><br><span class="line">&lt;a href=&quot;4.链接标签.html&quot;target=&quot;hello&quot;&gt;点击跳转&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p>&#x3D;&#x3D;与跳转到顶部方法类似，为给iframe一个name属性定义一个标签，然后再用a标签跳转&#x3D;&#x3D;</p>
+<hr>
+<h4 id="表单学习"><a href="#表单学习" class="headerlink" title="表单学习"></a>表单学习</h4><p>form标签<br>action:表单提交的位置，可以是网站，也可以是一个请求处理<br>method:post,get提交方式</p>
+<p>get方式提交，我们可以在url中看到我们提交的信息，不安全但高效<br>post比较安全，可传输大文件。</p>
+<p>input type 用于设置表单的形式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;3.图像标签.html&quot;method=&quot;post&quot;&gt;</span><br><span class="line">     &lt;!--文本输入框：input type=&quot;text&quot;</span><br><span class="line">    value=&quot;666&quot;     默认初始值</span><br><span class="line">    maxlength=&quot;8&quot;   最长能写几个字符</span><br><span class="line">    size=&quot;30&quot;       文本框长度</span><br><span class="line">    --&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;p&gt;名字：&lt;input type=&quot;text&quot;name=&quot;username&quot;&gt;&lt;/p&gt;</span><br><span class="line">    &lt;!--文本输入框：input type=&quot;password&quot;--&gt;</span><br><span class="line">    &lt;p&gt;密码：&lt;input type=&quot;password&quot;name=&quot;pwd&quot;&gt;&lt;/p&gt;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>单选框标签<br>  input type&#x3D;”radio”<br>  value:单选框的值<br>  name:表示组，若无组或组不一样则可以将两个都选上</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;性别：</span><br><span class="line">    &lt;input type=&quot;radio&quot;value=&quot;boy&quot;name=&quot;sex&quot;&gt;男</span><br><span class="line">    &lt;input type=&quot;radio&quot;value=&quot;girl&quot;name=&quot;sex&quot;&gt;女</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+<li><p>多选框标签<br>input type&#x3D;”checkbox”<br>checked 默认选择</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;爱好：</span><br><span class="line">    &lt;input type=&quot;checkbox&quot;value=&quot;sleep&quot;name=&quot;hobby&quot;&gt;睡觉</span><br><span class="line">    &lt;input type=&quot;checkbox&quot;value=&quot;chat&quot;name=&quot;hobby&quot;&gt;聊天</span><br><span class="line">    &lt;input type=&quot;checkbox&quot;value=&quot;game&quot;name=&quot;hobby&quot;&gt;游戏</span><br><span class="line">    &lt;input type=&quot;checkbox&quot;value=&quot;code&quot;name=&quot;hobby&quot;&gt;敲代码</span><br><span class="line">    &lt;input type=&quot;checkbox&quot;value=&quot;eat&quot;name=&quot;hobby&quot;&gt;吃饭</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>按钮标签<br>input type&#x3D;”button”  按钮<br>input type&#x3D;”image”   图片按钮<br>input type&#x3D;”submit”  提交按钮<br>input type&#x3D;”reset”    重置</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;按钮：</span><br><span class="line">        &lt;input type=&quot;button&quot;name=&quot;btn1&quot;value=&quot;点击变长&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;image&quot;src=&quot;../resourse/image/cover_1.jpg&quot;&gt;</span><br><span class="line">    &lt;/p&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;p&gt;</span><br><span class="line">        &lt;input type=&quot;submit&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;reset&quot;&gt;</span><br><span class="line">    &lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>文本域<br>cols 行<br>rows 列</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;反馈：</span><br><span class="line">    &lt;textarea name=&quot;textarea&quot; id=&quot;&quot; cols=&quot;50&quot; rows=&quot;10&quot;&gt;文本内容&lt;/textarea&gt;</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>文件域<br>input type&#x3D;”file”</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;</span><br><span class="line">    &lt;input type=&quot;file&quot; name=&quot;files&quot;&gt;</span><br><span class="line">    &lt;input type=&quot;button&quot; value=&quot;上传&quot; name=&quot;upload&quot;&gt;</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>邮件验证</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;邮箱：</span><br><span class="line">    &lt;input type=&quot;email&quot; name=&quot;email&quot;&gt;</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>URL</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;url：</span><br><span class="line">    &lt;input type=&quot;url&quot; name=&quot;url&quot;&gt;</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数字</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;商品数量：</span><br><span class="line">    &lt;input type=&quot;number&quot; name=&quot;number&quot; max=&quot;100&quot; min=&quot;0&quot; step=&quot;1&quot;&gt;</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>滑块</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;音量：</span><br><span class="line">    &lt;input type=&quot;range&quot;name=&quot;voice&quot; min=&quot;0&quot;max=&quot;100&quot;step=&quot;2&quot;&gt;</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>搜索框</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;搜索：</span><br><span class="line">    &lt;input type=&quot;search&quot;name=&quot;search&quot;&gt;</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;readonly只读<br>disable禁止<br>hidden隐藏&#x3D;&#x3D;</p>
+<ul>
+<li>增强鼠标可用性</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;</span><br><span class="line">    &lt;label for=&quot;mark&quot;&gt;你点我试试&lt;/label&gt;</span><br><span class="line">    &lt;input type=&quot;text&quot;id=&quot;mark&quot;&gt;</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>&#x3D;&#x3D;<br>&#x3D;&#x3D;提醒输入的东西 placeholder&#x3D;”请输入用户名”<br>非空判断 required<br>正则表达 pattern&#x3D;””&#x3D;&#x3D;</p>
+
+    </div>
+</article>
+
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            Evil_Eyes
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/10/30/hello-world/">Hello World</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022/04/24/JavaScript/">JavaScript</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022/04/15/CSS%E7%AC%94%E8%AE%B0/">CSS笔记</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022/04/08/html5%E7%AC%94%E8%AE%B0/">HTML5笔记</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022/04/15/CSS%E7%AC%94%E8%AE%B0/">CSS笔记</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/10/30/hello-world/">Hello World</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022/04/08/html5%E7%AC%94%E8%AE%B0/">HTML5笔记</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022/04/24/JavaScript/">JavaScript</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2022/04/08/html5%E7%AC%94%E8%AE%B0/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2022/04/08/html5%E7%AC%94%E8%AE%B0/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2022/04/08/html5%E7%AC%94%E8%AE%B0/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/css/" style="font-size: 15.381371906249491px;" class="tag-cloud-link">css</a>
+    
+    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 13.291946861388936px;" class="tag-cloud-link">学习笔记</a>
+    
+    <a href="/tags/html5/" style="font-size: 13.1344997887309px;" class="tag-cloud-link">html5</a>
+    
+    <a href="/tags/JavaScript/" style="font-size: 19.00378604136094px;" class="tag-cloud-link">JavaScript</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="http://kdays.net/days/" target="_blank">KDays Forum</a>
+    </li>
+    
+    <li>
+        <a href="http://www.gal123.com/" target="_blank">绅士导航♂</a>
+    </li>
+    
+    <li>
+        <a href="http://www.moe123.com/" target="_blank">萌导航</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/niconekomimi" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://space.bilibili.com/8642007" target="_blank">B站</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 Evil_Eyes Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '14'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+
+</html>
