@@ -10,7 +10,7 @@
     
     
     
-    <title>tags | NecoMiMi</title>
+    <title>算法基础课 | NecoMiMi</title>
     <link href="https://niconekomimi.github.io" rel="prefetch" />
 
     
@@ -186,21 +186,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <!-- 搜索页面(尽可能接近ZanBlog搜索功能) -->
-
-
+                    
 <article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="https://niconekomimi.github.io">NecoMiMi</a>
+        >
+        <span>算法基础课</span>
+    </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/tags/index.html">tags</a>
+                <a href="/2024/10/30/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E8%AF%BE/">算法基础课</a>
             </h1>
         </div>
         <div class="tag-article">
+            
             <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2022-04-09
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/c-c/">c/c++</a>
+                
             </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-10-30
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -208,19 +221,38 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/tags/index.html">tags</a>
+                    <a href="/2024/10/30/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E8%AF%BE/">算法基础课</a>
                 </h4>
             </div>
             <p>
-                <i class="fa fa-calendar"></i> 2022-04-09
+                <i class="fa fa-calendar"></i> 2024-10-30
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/c-c/">c/c++</a>
+                
+                
+                
             </p>
         </center>
     </div>
     <div class="content-article">
-        
+        <h4 id="基础算法"><a href="#基础算法" class="headerlink" title="基础算法"></a>基础算法</h4><h5 id="1-快速排序"><a href="#1-快速排序" class="headerlink" title="1.快速排序"></a>1.快速排序</h5><ol>
+<li>确定分界点：q[1]、q[(r)&#x2F;2]、q[r]、随机</li>
+<li>调整区间</li>
+<li>递归处理左右两端</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e6</span> + <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> q[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">quick_sort</span><span class="params">(<span class="type">int</span> q[], <span class="type">int</span> l, <span class="type">int</span> r)</span>  <span class="comment">//l代表左位置，r代表右位置</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l &gt;= r)	<span class="keyword">return</span>; <span class="comment">//当左位置大于右位置时返回</span></span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> x = q[l], i = l - <span class="number">1</span>, j = r + <span class="number">1</span>; <span class="comment">//以该分区的第一个值为基准，由于后面写法是每次都是先移动再做判断，所有i、j要往两边有一个偏移量</span></span><br><span class="line">    <span class="keyword">while</span> (i &lt; j)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">do</span> i++; <span class="keyword">while</span> (q[i] &lt; x);</span><br><span class="line">        <span class="keyword">do</span> j--; <span class="keyword">while</span> (q[j] &gt; x);</span><br><span class="line">        <span class="keyword">if</span> (i &lt; j)	<span class="built_in">swap</span>(q[i], q[j]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">quick_sort</span>(q, l, j);</span><br><span class="line">    <span class="built_in">quick_sort</span>(q, j + <span class="number">1</span>, r);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf_s</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)	<span class="built_in">scanf_s</span>(<span class="string">&quot;%d&quot;</span>, &amp;q[i]);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">quick_sort</span>(q, <span class="number">0</span>, n - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, q[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="2-归并排序"><a href="#2-归并排序" class="headerlink" title="2.归并排序"></a>2.归并排序</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e6</span> + <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> q[N], tmp[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">merge_sort</span><span class="params">(<span class="type">int</span> q[], <span class="type">int</span> l, <span class="type">int</span> r)</span>  <span class="comment">//l代表左边界，r代表右边界</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (l &gt;= r) <span class="keyword">return</span>;</span><br><span class="line">	<span class="type">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">merge_sort</span>(q, l, mid), <span class="built_in">merge_sort</span>(q, mid + <span class="number">1</span>, r);</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> k = <span class="number">0</span>, i = l, j = mid + <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (i &lt;= mid &amp;&amp; j &lt;= r)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (q[i] &lt;= q[j])   tmp[k++] = q[i++];</span><br><span class="line">		<span class="keyword">else</span> tmp[k++] = q[j++];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span> (i &lt;= mid)    tmp[k++] = q[i++];</span><br><span class="line">	<span class="keyword">while</span> (j &lt;= r) tmp[k++] = q[j++];</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (i = l, j = <span class="number">0</span>; i &lt;= r; i++, j++) q[i] = tmp[j];</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">scanf_s</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)	<span class="built_in">scanf_s</span>(<span class="string">&quot;%d&quot;</span>, &amp;q[i]);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">merge_sort</span>(q, <span class="number">0</span>, n - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, q[i]);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
     </div>
 </article>
-
 
 
                 </div>
@@ -376,17 +408,17 @@
 
                 
                 <li>
-                    <a href="/tags/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2024/10/30/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E8%AF%BE/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/tags/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2024/10/30/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E8%AF%BE/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/tags/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2024/10/30/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E8%AF%BE/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -394,15 +426,15 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/css/" style="font-size: 17.190917244900685px;" class="tag-cloud-link">css</a>
+    <a href="/tags/css/" style="font-size: 11.130460009668798px;" class="tag-cloud-link">css</a>
     
-    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 8.631391284114164px;" class="tag-cloud-link">学习笔记</a>
+    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 11.259307712819254px;" class="tag-cloud-link">学习笔记</a>
     
-    <a href="/tags/JavaScript/" style="font-size: 11.525836719371874px;" class="tag-cloud-link">JavaScript</a>
+    <a href="/tags/JavaScript/" style="font-size: 13.510762856231745px;" class="tag-cloud-link">JavaScript</a>
     
-    <a href="/tags/c-c/" style="font-size: 18.404521381802677px;" class="tag-cloud-link">c/c++</a>
+    <a href="/tags/c-c/" style="font-size: 12.352364670985736px;" class="tag-cloud-link">c/c++</a>
     
-    <a href="/tags/html5/" style="font-size: 18.16737218657539px;" class="tag-cloud-link">html5</a>
+    <a href="/tags/html5/" style="font-size: 13.186687394616797px;" class="tag-cloud-link">html5</a>
     
 </div>
                 

@@ -10,7 +10,7 @@
     
     
     
-    <title>tags | NecoMiMi</title>
+    <title>NecoMiMi</title>
     <link href="https://niconekomimi.github.io" rel="prefetch" />
 
     
@@ -186,21 +186,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <!-- 搜索页面(尽可能接近ZanBlog搜索功能) -->
-
-
+                    
 <article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="https://niconekomimi.github.io">NecoMiMi</a>
+        >
+        <span></span>
+    </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/tags/index.html">tags</a>
+                <a href="/2024/10/31/ROS/"></a>
             </h1>
         </div>
         <div class="tag-article">
+            
             <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2022-04-09
+                <i class="fa fa-calendar"></i> 2024-10-31
             </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -208,19 +214,87 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/tags/index.html">tags</a>
+                    <a href="/2024/10/31/ROS/"></a>
                 </h4>
             </div>
             <p>
-                <i class="fa fa-calendar"></i> 2022-04-09
+                <i class="fa fa-calendar"></i> 2024-10-31
+            </p>
+            <p>
+                
+                
             </p>
         </center>
     </div>
     <div class="content-article">
-        
+        <h3 id="1-Topic话题和Message消息"><a href="#1-Topic话题和Message消息" class="headerlink" title="1. Topic话题和Message消息"></a>1. Topic话题和Message消息</h3><h4 id="1-2-Publish发布者"><a href="#1-2-Publish发布者" class="headerlink" title="1.2 Publish发布者"></a>1.2 Publish发布者</h4><p>​	1.召唤ROS大管家rospy<br>​	2.向ROS大管家申请初始化节点<br>​	3.告诉ROS大管家rospy需要发布的话题名称，并向他索要能够发送消息包的发布对象pub。<br>​	4.开启一个whie循环，不停的使用pub对象发布消息包。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># coding=utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> rospy</span><br><span class="line"><span class="keyword">from</span> std_msgs.msg <span class="keyword">import</span> String</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    rospy.init_node(<span class="string">&quot;chao_node&quot;</span>);</span><br><span class="line">    rospy.logwarn(<span class="string">&quot;我的枪去而复返，你的生命有去无回&quot;</span>);</span><br><span class="line">pub = rospy.Publisher(<span class="string">&quot;kuai_shang_che_kai_hei_qun&quot;</span>,String,queue_size=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">rate = rospy.Rate(<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">not</span> rospy.is_shutdown():</span><br><span class="line">    rospy.loginfo(<span class="string">&quot;我要开始刷屏了&quot;</span>);</span><br><span class="line">    msg = String()</span><br><span class="line">    msg.data = <span class="string">&quot;国服马超带飞&quot;</span></span><br><span class="line">    pub.publish(msg)</span><br><span class="line">    rate.sleep()</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-2-Subscriber订阅者"><a href="#1-2-Subscriber订阅者" class="headerlink" title="1.2 Subscriber订阅者"></a>1.2 Subscriber订阅者</h4><p>​	1.召唤ROS大管家rospy<br>​	2.向ROS大管家rospy申请初始化节点。<br>​	3.构建一个回调函数，用于处理从话题中接收到的消息包数据<br>​	4.告诉ROS大管家 rospy需要订阅的话题名称，并设置接收消息包的回调函数。<br>​	5.调用ROS的spin()函数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># coding=utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> rospy</span><br><span class="line"><span class="keyword">from</span> std_msgs.msg <span class="keyword">import</span> String</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">chao_callback</span>(<span class="params">msg</span>):</span><br><span class="line">    rospy.loginfo(msg.data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">yao_callback</span>(<span class="params">msg</span>):</span><br><span class="line">    rospy.logwarn(msg.data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    rospy.init_node(<span class="string">&quot;ma_node&quot;</span>)</span><br><span class="line"></span><br><span class="line">    sub = rospy.Subscriber(<span class="string">&quot;kuai_shang_che_kai_hei_qun&quot;</span>,String,chao_callback,queue_size=<span class="number">10</span>)</span><br><span class="line">    sub_2 = rospy.Subscriber(<span class="string">&quot;gie_gie_dai_wo&quot;</span>,String,yao_callback,queue_size=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">    rospy.spin()</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="1-3-launch启动多个ROS节点"><a href="#1-3-launch启动多个ROS节点" class="headerlink" title="1.3 launch启动多个ROS节点"></a>1.3 launch启动多个ROS节点</h4><p>格式：![image-20241018142606686](C:\Users\yulong wang\AppData\Roaming\Typora\typora-user-images\image-20241018142606686.png)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">launch</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">node</span> <span class="attr">pkg</span>=<span class="string">&quot;ssr_pkg&quot;</span> <span class="attr">type</span>=<span class="string">&quot;chao_node.py&quot;</span> <span class="attr">name</span>=<span class="string">&quot;chao_node&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">node</span> <span class="attr">pkg</span>=<span class="string">&quot;ssr_pkg&quot;</span> <span class="attr">type</span>=<span class="string">&quot;yao_node.py&quot;</span> <span class="attr">name</span>=<span class="string">&quot;yao_node&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">node</span> <span class="attr">pkg</span>=<span class="string">&quot;atr_pkg&quot;</span> <span class="attr">type</span>=<span class="string">&quot;ma_node.py&quot;</span> <span class="attr">name</span>=<span class="string">&quot;ma_node launch-prefix=&quot;</span><span class="attr">gnome-terminal</span> <span class="attr">-e</span>&quot;/&gt;</span> </span><br><span class="line"><span class="comment">&lt;!-- launch-prefix=&quot;gnome-terminal -e ：单独运行在一个terminal--&gt;</span></span><br><span class="line">                                                                                     </span><br><span class="line"><span class="tag">&lt;/<span class="name">launch</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-标准消息包std-msgs"><a href="#2-标准消息包std-msgs" class="headerlink" title="2. 标准消息包std_msgs"></a>2. 标准消息包std_msgs</h3><p>![image-20241017195340608](C:\Users\yulong wang\AppData\Roaming\Typora\typora-user-images\image-20241017195340608.png)</p>
+<p>结构体类型：</p>
+<p>​	ColorRGBA（表示像素）</p>
+<p>​	Duration&#x2F;Time （相对时间&#x2F;绝对时间）</p>
+<p>​	Header（时间戳和坐标）</p>
+<p>​	MultiArrayDImension&#x2F;MultiArrayLayout（描述数组内容）</p>
+<h3 id="3-常用消息包common-msgs"><a href="#3-常用消息包common-msgs" class="headerlink" title="3. 常用消息包common_msgs"></a>3. 常用消息包common_msgs</h3><p>![image-20241017200414874](C:\Users\yulong wang\AppData\Roaming\Typora\typora-user-images\image-20241017200414874.png)</p>
+<p>​	常用消息包：geometry_msgs&#x2F;sensor_msgs</p>
+<h4 id="3-1-几何消息包geometry-msgs"><a href="#3-1-几何消息包geometry-msgs" class="headerlink" title="3.1 几何消息包geometry_msgs"></a>3.1 几何消息包geometry_msgs</h4><p>![image-20241017200601343](C:\Users\yulong wang\AppData\Roaming\Typora\typora-user-images\image-20241017200601343.png)</p>
+<h4 id="3-2-传感器消息包sensor-msgs"><a href="#3-2-传感器消息包sensor-msgs" class="headerlink" title="3.2 传感器消息包sensor_msgs"></a>3.2 传感器消息包sensor_msgs</h4><p>![image-20241017200628634](C:\Users\yulong wang\AppData\Roaming\Typora\typora-user-images\image-20241017200628634.png)</p>
+<h4 id="3-3-自定义消息类型"><a href="#3-3-自定义消息类型" class="headerlink" title="3.3 自定义消息类型"></a>3.3 自定义消息类型</h4><p>生成自定义消息的步骤：</p>
+<ol>
+<li>创建新软件包，依赖项message_generation、message_runtime</li>
+<li>软件包添加msg目录，新建自定义消息文件，以.msg结尾。</li>
+<li>在CMakeLists.txt中，将新建的.msg文件加入add message_files()</li>
+<li>在CMakeLists.txt中去掉generate_messages()注释符号，将依赖的其他消息包名称添加进去。</li>
+<li>在CMakeLists.txt中，将message_runtime 加入 catkin_package()的CATKIN DEPENDS。</li>
+<li>在package.xml中，将message_generation、message_runtime加入<build depend>和<exec depend></li>
+<li>编译软件包，生成新的自定义消息类型</li>
+</ol>
+<h4 id="3-4-自定义消息类型的应用"><a href="#3-4-自定义消息类型的应用" class="headerlink" title="3.4 自定义消息类型的应用"></a>3.4 自定义消息类型的应用</h4><ol>
+<li>在节点代码中，先 import 新定义的消息类型。</li>
+<li>在发布或订阅话题的时候，将话题中的消息类型设置为新的消息类型。</li>
+<li>按照新的消息结构，对消息包进行赋值发送或读取解析。</li>
+<li>在CMakeLists.txt文件的find_package()中，添加新消息包名称作为依赖项。</li>
+<li>在package.xml中，将新消息包添加到<build_depend>和<excle_depend>中去。</li>
+<li>重新编译，确保全歼包进入ROS的包列表。</li>
+</ol>
+<h3 id="4-栅格地图"><a href="#4-栅格地图" class="headerlink" title="4.栅格地图"></a>4.栅格地图</h3><h4 id="4-1栅格地图格式"><a href="#4-1栅格地图格式" class="headerlink" title="4.1栅格地图格式"></a>4.1栅格地图格式</h4><ol>
+<li>地图数据格式</li>
+</ol>
+<p>![image-20241018164710650](C:\Users\yulong wang\AppData\Roaming\Typora\typora-user-images\image-20241018164710650.png)</p>
+<ol start="2">
+<li>地图描述信息</li>
+</ol>
+<p>![image-20241018164834735](C:\Users\yulong wang\AppData\Roaming\Typora\typora-user-images\image-20241018164834735.png)</p>
+<h4 id="4-2发布地图"><a href="#4-2发布地图" class="headerlink" title="4.2发布地图"></a>4.2发布地图</h4><ol>
+<li>构建一个软件包map_pkg，依赖项里加上nav_msgs</li>
+<li>编译软件包，让其进入ROS的包列表。</li>
+<li>在map_pkg里创建一个节点map_pub_node.py。</li>
+<li>在节点中发布话题&#x2F;map，消息类型为OccupancyGrid。</li>
+<li>构建一个OccupancyGrid地图消息包，并对其进行赋值。</li>
+<li>将地图消息包发送到话题&#x2F;map。</li>
+<li>为节点map_pub_node.py添加可执行权限</li>
+<li>运行map_pub_node.py节点</li>
+<li>启动RViz，订阅话题&#x2F;map，显示地图</li>
+</ol>
+<h3 id="5-slam"><a href="#5-slam" class="headerlink" title="5.slam"></a>5.slam</h3><p>​	同步定位与建图（Simultaneous Localization and Mapping，简称SLAM）问题可以描述为：机器人在未知环境中从一个未知位置开始移动,在移动过程中根据位置和地图进行自身定位，同时在自身定位的基础上建造增量式地图，实现机器人的自主定位和导航。</p>
+<h4 id="5-1Hector-Mapping"><a href="#5-1Hector-Mapping" class="headerlink" title="5.1Hector_Mapping"></a>5.1Hector_Mapping</h4><h3 id="6-ROS的TF系统"><a href="#6-ROS的TF系统" class="headerlink" title="6.ROS的TF系统"></a>6.ROS的TF系统</h3><p>​	地图坐标系（&#x2F;map）：原点在机器人建图的初始位置，坐标轴方向遵循ROS的右手法则</p>
+<p>​	机器人坐标系（&#x2F;base_footprint）：原点在机器人底盘中心位置，坐标轴方向遵循ROS的右手法则</p>
+<p>​	地图坐标系作为父坐标系，机器人坐标系为子坐标系。</p>
+<p>​	TF（Transform）：用于描述子坐标系关于父坐标系的位置和角度偏移量</p>
+
     </div>
 </article>
-
 
 
                 </div>
@@ -376,17 +450,17 @@
 
                 
                 <li>
-                    <a href="/tags/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2024/10/31/ROS/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/tags/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2024/10/31/ROS/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/tags/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2024/10/31/ROS/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -394,15 +468,15 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/css/" style="font-size: 17.190917244900685px;" class="tag-cloud-link">css</a>
+    <a href="/tags/css/" style="font-size: 12.58449428282944px;" class="tag-cloud-link">css</a>
     
-    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 8.631391284114164px;" class="tag-cloud-link">学习笔记</a>
+    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 15.441717562986508px;" class="tag-cloud-link">学习笔记</a>
     
-    <a href="/tags/JavaScript/" style="font-size: 11.525836719371874px;" class="tag-cloud-link">JavaScript</a>
+    <a href="/tags/JavaScript/" style="font-size: 8.993141052154058px;" class="tag-cloud-link">JavaScript</a>
     
-    <a href="/tags/c-c/" style="font-size: 18.404521381802677px;" class="tag-cloud-link">c/c++</a>
+    <a href="/tags/c-c/" style="font-size: 12.188435778233103px;" class="tag-cloud-link">c/c++</a>
     
-    <a href="/tags/html5/" style="font-size: 18.16737218657539px;" class="tag-cloud-link">html5</a>
+    <a href="/tags/html5/" style="font-size: 19.85606292222757px;" class="tag-cloud-link">html5</a>
     
 </div>
                 
