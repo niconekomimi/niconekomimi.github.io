@@ -10,7 +10,7 @@
     
     
     
-    <title>NecoMiMi</title>
+    <title>ROS | NecoMiMi</title>
     <link href="https://niconekomimi.github.io" rel="prefetch" />
 
     
@@ -156,7 +156,7 @@
                         </li>
                         
                         <li>
-                            <a href="/tags/JavaScript/">JavaScript</a>
+                            <a href="/tags/python/">python</a>
                         </li>
                         
                         
@@ -192,19 +192,26 @@
         <i class="fa fa-home"></i>
         <a href="https://niconekomimi.github.io">NecoMiMi</a>
         >
-        <span></span>
+        <span>ROS</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/2024/10/31/ROS/"></a>
+                <a href="/2024/10/30/ROS/">ROS</a>
             </h1>
         </div>
         <div class="tag-article">
             
             <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2024-10-31
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/python/">python</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-10-30
             </span>
             
         </div>
@@ -214,20 +221,25 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/2024/10/31/ROS/"></a>
+                    <a href="/2024/10/30/ROS/">ROS</a>
                 </h4>
             </div>
             <p>
-                <i class="fa fa-calendar"></i> 2024-10-31
+                <i class="fa fa-calendar"></i> 2024-10-30
             </p>
             <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/python/">python</a>
+                
                 
                 
             </p>
         </center>
     </div>
     <div class="content-article">
-        <h3 id="1-Topic话题和Message消息"><a href="#1-Topic话题和Message消息" class="headerlink" title="1. Topic话题和Message消息"></a>1. Topic话题和Message消息</h3><h4 id="1-2-Publish发布者"><a href="#1-2-Publish发布者" class="headerlink" title="1.2 Publish发布者"></a>1.2 Publish发布者</h4><p>​	1.召唤ROS大管家rospy<br>​	2.向ROS大管家申请初始化节点<br>​	3.告诉ROS大管家rospy需要发布的话题名称，并向他索要能够发送消息包的发布对象pub。<br>​	4.开启一个whie循环，不停的使用pub对象发布消息包。</p>
+        <h4 id="基础算法"><a href="#基础算法" class="headerlink" title="基础算法"></a>基础算法</h4><h3 id="1-Topic话题和Message消息"><a href="#1-Topic话题和Message消息" class="headerlink" title="1. Topic话题和Message消息"></a>1. Topic话题和Message消息</h3><h4 id="1-2-Publish发布者"><a href="#1-2-Publish发布者" class="headerlink" title="1.2 Publish发布者"></a>1.2 Publish发布者</h4><p>​	1.召唤ROS大管家rospy<br>​	2.向ROS大管家申请初始化节点<br>​	3.告诉ROS大管家rospy需要发布的话题名称，并向他索要能够发送消息包的发布对象pub。<br>​	4.开启一个whie循环，不停的使用pub对象发布消息包。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># coding=utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> rospy</span><br><span class="line"><span class="keyword">from</span> std_msgs.msg <span class="keyword">import</span> String</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    rospy.init_node(<span class="string">&quot;chao_node&quot;</span>);</span><br><span class="line">    rospy.logwarn(<span class="string">&quot;我的枪去而复返，你的生命有去无回&quot;</span>);</span><br><span class="line">pub = rospy.Publisher(<span class="string">&quot;kuai_shang_che_kai_hei_qun&quot;</span>,String,queue_size=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">rate = rospy.Rate(<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">not</span> rospy.is_shutdown():</span><br><span class="line">    rospy.loginfo(<span class="string">&quot;我要开始刷屏了&quot;</span>);</span><br><span class="line">    msg = String()</span><br><span class="line">    msg.data = <span class="string">&quot;国服马超带飞&quot;</span></span><br><span class="line">    pub.publish(msg)</span><br><span class="line">    rate.sleep()</span><br></pre></td></tr></table></figure>
 
 <h4 id="1-2-Subscriber订阅者"><a href="#1-2-Subscriber订阅者" class="headerlink" title="1.2 Subscriber订阅者"></a>1.2 Subscriber订阅者</h4><p>​	1.召唤ROS大管家rospy<br>​	2.向ROS大管家rospy申请初始化节点。<br>​	3.构建一个回调函数，用于处理从话题中接收到的消息包数据<br>​	4.告诉ROS大管家 rospy需要订阅的话题名称，并设置接收消息包的回调函数。<br>​	5.调用ROS的spin()函数。</p>
@@ -353,7 +365,7 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/10/31/ROS/"></a>
+                    <a href="/2024/10/30/ROS/">ROS</a>
                 </span>
             </li>
             
@@ -411,19 +423,7 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2022/04/24/JavaScript/">JavaScript</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2024/10/31/ROS/"></a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2022/04/08/html5%E7%AC%94%E8%AE%B0/">HTML5笔记</a>
+                    <a href="/2024/10/30/ROS/">ROS</a>
                 </span>
             </li>
             
@@ -435,7 +435,19 @@
             
             <li class="list-group-item">
                 <span class="post-title">
+                    <a href="/2022/04/24/JavaScript/">JavaScript</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
                     <a href="/2024/10/30/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E8%AF%BE/">算法基础课</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2022/04/08/html5%E7%AC%94%E8%AE%B0/">HTML5笔记</a>
                 </span>
             </li>
             
@@ -450,17 +462,17 @@
 
                 
                 <li>
-                    <a href="/2024/10/31/ROS/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2024/10/30/ROS/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/2024/10/31/ROS/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2024/10/30/ROS/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/2024/10/31/ROS/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2024/10/30/ROS/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -468,15 +480,17 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/css/" style="font-size: 8.007846910053352px;" class="tag-cloud-link">css</a>
+    <a href="/tags/css/" style="font-size: 18.229660505815637px;" class="tag-cloud-link">css</a>
     
-    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 15.479055058616243px;" class="tag-cloud-link">学习笔记</a>
+    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 9.736367116361759px;" class="tag-cloud-link">学习笔记</a>
     
-    <a href="/tags/JavaScript/" style="font-size: 14.764173596625534px;" class="tag-cloud-link">JavaScript</a>
+    <a href="/tags/python/" style="font-size: 15.878945837594749px;" class="tag-cloud-link">python</a>
     
-    <a href="/tags/html5/" style="font-size: 15.43834290711045px;" class="tag-cloud-link">html5</a>
+    <a href="/tags/JavaScript/" style="font-size: 16.396288785995747px;" class="tag-cloud-link">JavaScript</a>
     
-    <a href="/tags/c-c/" style="font-size: 19.51176068634188px;" class="tag-cloud-link">c/c++</a>
+    <a href="/tags/c-c/" style="font-size: 18.205633843549627px;" class="tag-cloud-link">c/c++</a>
+    
+    <a href="/tags/html5/" style="font-size: 9.090378034258208px;" class="tag-cloud-link">html5</a>
     
 </div>
                 
