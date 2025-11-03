@@ -10,7 +10,7 @@
     
     
     
-    <title>tags: html5 | NecoMiMi</title>
+    <title>NecoMiMi</title>
     <link href="https://niconekomimi.github.io" rel="prefetch" />
 
     
@@ -186,19 +186,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-tag">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="https://niconekomimi.github.io">NecoMiMi</a>
         >
-        <span>标签</span>
+        <span></span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/tags/html5/index.html">html5</a>
+                <a href="/2025/04/22/numpy%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"></a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2025-04-22
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -206,21 +214,34 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/tags/html5/index.html">html5</a>
+                    <a href="/2025/04/22/numpy%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"></a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2025-04-22
+            </p>
+            <p>
+                
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-            <a href="/2022/04/08/html5%E7%AC%94%E8%AE%B0/">HTML5笔记</a>
-            <br>
-            
-            
-        </div>
+    <div class="content-article">
+        <h2 id="1-数组创建："><a href="#1-数组创建：" class="headerlink" title="1 数组创建："></a>1 数组创建：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从列表创建数组</span></span><br><span class="line">a = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line"><span class="built_in">print</span>(a)  <span class="comment"># [1 2 3 4]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建二维数组</span></span><br><span class="line">b = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]])</span><br><span class="line"><span class="built_in">print</span>(b)  </span><br><span class="line"><span class="comment"># [[1 2 3]</span></span><br><span class="line"><span class="comment">#  [4 5 6]]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建特殊数组</span></span><br><span class="line">zeros = np.zeros((<span class="number">2</span>, <span class="number">3</span>))     <span class="comment"># 2x3的全0数组</span></span><br><span class="line">ones = np.ones((<span class="number">3</span>, <span class="number">2</span>))       <span class="comment"># 3x2的全1数组</span></span><br><span class="line">empty = np.empty((<span class="number">2</span>, <span class="number">2</span>))     <span class="comment"># 2x2的未初始化数组</span></span><br><span class="line">identity = np.eye(<span class="number">3</span>)         <span class="comment"># 3x3的单位矩阵</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-数组操作："><a href="#2-数组操作：" class="headerlink" title="2 数组操作："></a>2 数组操作：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取数组形状/及数组是几列几行</span></span><br><span class="line"><span class="built_in">print</span>(b.shape)  <span class="comment"># (2, 3)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 改变数组形状</span></span><br><span class="line">c = b.reshape(<span class="number">3</span>, <span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(c)</span><br><span class="line"><span class="comment"># [[1 2]</span></span><br><span class="line"><span class="comment">#  [3 4]</span></span><br><span class="line"><span class="comment">#  [5 6]]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 数组切片</span></span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">0</span>:<span class="number">2</span>])  <span class="comment"># [1 2]</span></span><br><span class="line"><span class="built_in">print</span>(b[<span class="number">0</span>, <span class="number">1</span>]) <span class="comment"># 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 数组转置</span></span><br><span class="line">d = b.T</span><br><span class="line"><span class="built_in">print</span>(d)</span><br><span class="line"><span class="comment"># [[1 4]</span></span><br><span class="line"><span class="comment">#  [2 5]</span></span><br><span class="line"><span class="comment">#  [3 6]]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-数学运算："><a href="#3-数学运算：" class="headerlink" title="3 数学运算："></a>3 数学运算：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 基本运算</span></span><br><span class="line">a = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">b = np.array([<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(a + b)     <span class="comment"># [5 7 9]</span></span><br><span class="line"><span class="built_in">print</span>(a - b)     <span class="comment"># [-3 -3 -3]</span></span><br><span class="line"><span class="built_in">print</span>(a * b)     <span class="comment"># [4 10 18]</span></span><br><span class="line"><span class="built_in">print</span>(a / b)     <span class="comment"># [0.25 0.4 0.5]</span></span><br><span class="line"><span class="built_in">print</span>(a ** <span class="number">2</span>)    <span class="comment"># [1 4 9]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 矩阵运算</span></span><br><span class="line">a = np.array([[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>]])</span><br><span class="line">b = np.array([[<span class="number">5</span>, <span class="number">6</span>], [<span class="number">7</span>, <span class="number">8</span>]])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(np.dot(a, b))  <span class="comment"># 矩阵乘法</span></span><br><span class="line"><span class="comment"># [[19 22]</span></span><br><span class="line"><span class="comment">#  [43 50]]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 统计函数</span></span><br><span class="line"><span class="built_in">print</span>(np.mean(a))    <span class="comment"># 2.5</span></span><br><span class="line"><span class="built_in">print</span>(np.<span class="built_in">max</span>(a))     <span class="comment"># 4</span></span><br><span class="line"><span class="built_in">print</span>(np.<span class="built_in">min</span>(a))     <span class="comment"># 1</span></span><br><span class="line"><span class="built_in">print</span>(np.<span class="built_in">sum</span>(a))     <span class="comment"># 10</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-随机数生成"><a href="#4-随机数生成" class="headerlink" title="4 随机数生成"></a>4 随机数生成</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成随机数</span></span><br><span class="line">random_array = np.random.random((<span class="number">2</span>, <span class="number">3</span>))  <span class="comment"># 2x3的均匀分布随机数数组</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成指定范围的均匀分布随机数</span></span><br><span class="line">uniform_array = np.random.uniform(-<span class="number">1</span>, <span class="number">1</span>, size=(<span class="number">2</span>, <span class="number">3</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成正态分布随机数</span></span><br><span class="line">normal_array = np.random.normal(<span class="number">0</span>, <span class="number">1</span>, size=(<span class="number">2</span>, <span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-数组排序和条件过滤"><a href="#5-数组排序和条件过滤" class="headerlink" title="5 数组排序和条件过滤"></a>5 数组排序和条件过滤</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = np.array([<span class="number">3</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 排序</span></span><br><span class="line"><span class="built_in">print</span>(np.sort(a))  <span class="comment"># [1 2 3 4]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 条件过滤</span></span><br><span class="line">mask = a &gt; <span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(mask)         <span class="comment"># [True False True False]</span></span><br><span class="line"><span class="built_in">print</span>(a[mask])      <span class="comment"># [3 4]</span></span><br></pre></td></tr></table></figure>
+
+
     </div>
 </article>
+
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -422,17 +443,17 @@
 
                 
                 <li>
-                    <a href="/tags/html5/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2025/04/22/numpy%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/tags/html5/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2025/04/22/numpy%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/tags/html5/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2025/04/22/numpy%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -440,17 +461,17 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/JavaScript/" style="font-size: 18.552696713381025px;" class="tag-cloud-link">JavaScript</a>
+    <a href="/tags/JavaScript/" style="font-size: 13.877713743114874px;" class="tag-cloud-link">JavaScript</a>
     
-    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 11.311585500988386px;" class="tag-cloud-link">学习笔记</a>
+    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 9.83054368985249px;" class="tag-cloud-link">学习笔记</a>
     
-    <a href="/tags/css/" style="font-size: 10.758297369418388px;" class="tag-cloud-link">css</a>
+    <a href="/tags/css/" style="font-size: 17.54707131773127px;" class="tag-cloud-link">css</a>
     
-    <a href="/tags/python/" style="font-size: 13.511348779572785px;" class="tag-cloud-link">python</a>
+    <a href="/tags/python/" style="font-size: 15.905267141840085px;" class="tag-cloud-link">python</a>
     
-    <a href="/tags/html5/" style="font-size: 15.231148002826888px;" class="tag-cloud-link">html5</a>
+    <a href="/tags/html5/" style="font-size: 10.156954242202396px;" class="tag-cloud-link">html5</a>
     
-    <a href="/tags/c-c/" style="font-size: 13.263728079962728px;" class="tag-cloud-link">c/c++</a>
+    <a href="/tags/c-c/" style="font-size: 15.06481847205243px;" class="tag-cloud-link">c/c++</a>
     
 </div>
                 
